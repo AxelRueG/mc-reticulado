@@ -1,0 +1,5 @@
+Ejercicio 6 reticulado de resortes
+En el script ODE_ejer6 es donde se ejecuta la resolucion del problema
+En funcion diferencial se encuetra la funcion que le pasamos al metodo ODE23 de octave
+fuerza es una funcion auxiliar para calcular la fuerza del resorte
+animacion anima una secuencia de 50 segundos del sistema
