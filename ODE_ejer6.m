@@ -2,16 +2,13 @@ clear; clc; close all;
 
 #Resolucion del Sistema de Ecuaciones Diferenciales con ODE23:
 
-pasos = 6; %cantidad de pasos;
-t_span = linspace(0,50,pasos); % saltos de tiempo;
+pasos = 6 %cantidad de pasos;
+t_span = linspace(0,50,pasos) % saltos de tiempo;
 
-Y = [[10 0];[20 0];[30 0];[40 0];[10 7.5];[30 7.5];[20 10];   % posiciones
-     [ 0 0];[ 0 0];[ 0 0];[ 0 0];[ 0   0];[ 0   0];[ 0  0]];  % velocidades
-
-
+Y = [10 0 20 0 30 0 40 0 10 7.5 30 7.5 20 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0];  % velocidades
 
 #la funcion ODE23(@fundif_por_referencia,vector_de_tiempo,valores_iniciales);
-[t vec] = ode23(@funcion_diferencial,t_span,Y); %resolucion del S.E.D.
+[t vec] = ode23(@funcion_diferencial,t_span,Y); % resolucion del S.E.D.
 
 vec
 
