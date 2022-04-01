@@ -18,7 +18,7 @@ function diff = funcion_diferencial(t,X)
 %Valores del sistema dado:
   m = [1 1 2 1 1 1 1 1];            % masas
   k = [2 4 2 2 2 4 2 2 2 2 2 4 2];  % rigidez
-  P = [0 1];                        % fuerza externa
+  P = [0 -1];                        % fuerza externa
 
 % _____________________________________________________________________________
 %Definimos las fuerza que se ejercen entre las masas:  
