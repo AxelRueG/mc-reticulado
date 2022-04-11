@@ -22,8 +22,8 @@ function diff = funcion_diferencial(t,X)
 
 % _____________________________________________________________________________
 %Definimos las fuerza que se ejercen entre las masas:  
-  F12 = fuerza( x1o, x1o, x2o, x(1,:), k(1));
-  F16 = fuerza( x1o, x1o, x6o, x(5,:), k(4));
+  F12 = fuerza( x1o, x1o,    x2o, x(1,:), k(1));
+  F16 = fuerza( x1o, x1o,    x6o, x(5,:), k(4));
   F23 = fuerza( x2o, x(1,:), x3o, x(2,:), k(7));
   F26 = fuerza( x2o, x(1,:), x6o, x(5,:), k(3));
   F36 = fuerza( x3o, x(2,:), x6o, x(5,:), k(6));
@@ -56,5 +56,8 @@ function diff = funcion_diferencial(t,X)
   dv8dt = (-F68-F38-F78)/m(8);
 
 % _____________________________________________________________________________
-  diff = [dx2dt(1) dx2dt(2) dx3dt(1) dx3dt(2) dx4dt(1) dx4dt(2) dx5dt(1) dx5dt(2) dx6dt(1) dx6dt(2) dx7dt(1) dx7dt(2) dx8dt(1) dx8dt(2) dv2dt(1) dv2dt(2) dv3dt(1) dv3dt(2) dv4dt(1) dv4dt(2) dv5dt(1) dv5dt(2) dv6dt(1) dv6dt(2) dv7dt(1) dv7dt(2) dv8dt(1) dv8dt(2)];
+  diff = [dx2dt(1) dx2dt(2) dx3dt(1) dx3dt(2) dx4dt(1) dx4dt(2) dx5dt(1) ...
+          dx5dt(2) dx6dt(1) dx6dt(2) dx7dt(1) dx7dt(2) dx8dt(1) dx8dt(2) ...
+          dv2dt(1) dv2dt(2) dv3dt(1) dv3dt(2) dv4dt(1) dv4dt(2) dv5dt(1) ...
+          dv5dt(2) dv6dt(1) dv6dt(2) dv7dt(1) dv7dt(2) dv8dt(1) dv8dt(2)];
 end
