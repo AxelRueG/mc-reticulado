@@ -20,6 +20,11 @@ function diff = funcion_diferencial(t,X)
   k = [2 4 2 2 2 4 2 2 2 2 2 4 2];  % rigidez
   P = [0 -1];                        % fuerza externa
 
+  % funcion senoidal ----------------------------------------------------------
+  senoidal = @(A,fs) A*sin(2*pi*fs*t);
+  %% Fuerza P(t) con variacion senusoidal
+  % P = [0 -senoidal(1,0.1)];  % en y
+
 % _____________________________________________________________________________
 %Definimos las fuerza que se ejercen entre las masas:  
   F12 = fuerza( x1o, x1o,    x2o, x(1,:), k(1));

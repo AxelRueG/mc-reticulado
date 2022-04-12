@@ -50,7 +50,8 @@ Extraiga conclusiones
 | 12    | 7  | 3  | 4 |
 | 13    | 4  | 3  | 2 |
 
+---
+### Algunos resultados
 
-### gif reticulado con fuerza uniforme
-
+#### animacion del reticulado fuerza uniforme
 !['animacion fuerza P uniforme'](./tmp/reticulado.gif)
