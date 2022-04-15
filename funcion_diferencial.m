@@ -1,10 +1,11 @@
 % sistema de ecuaciones diferenciales
 function diff = funcion_diferencial(t,X)
-  % ode23 solo acepta vectores numericos
-  % formateamos en x un vector de vectores
-  % con x(i,:) la posicion o velocidad en [x y] de la masa i
-  x = formater(X);
+  % ode23 solo acepta vectores numericos ---------------------------------------
+  % genero una matriz [x y] 
+  X = X(:); % garantizo que sea un vector columna
+  x = [X([1:2:length(X)]) X([2:2:length(X)])]; % genero una matriz 
 
+% CONDICIONES INICIALES --------------------------------------------------------
 %posiciones originales:
   x1o = [0 0];
   x2o = [10 0];
@@ -20,12 +21,12 @@ function diff = funcion_diferencial(t,X)
   k = [2 4 2 2 2 4 2 2 2 2 2 4 2];  % rigidez
   P = [0 -1];                        % fuerza externa
 
-  % funcion senoidal ----------------------------------------------------------
-  senoidal = @(A,fs) A*sin(2*pi*fs*t);
+  %% funcion senoidal ----------------------------------------------------------
+  % senoidal = @(A,fs) A*sin(2*pi*fs*t);
   %% Fuerza P(t) con variacion senusoidal
   % P = [0 -senoidal(1,0.1)];  % en y
 
-% _____________________________________________________________________________
+% ______________________________________________________________________________
 %Definimos las fuerza que se ejercen entre las masas:  
   F12 = fuerza( x1o, x1o,    x2o, x(1,:), k(1));
   F16 = fuerza( x1o, x1o,    x6o, x(5,:), k(4));
