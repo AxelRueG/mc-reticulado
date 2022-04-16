@@ -13,9 +13,9 @@ Y = [10 0 20 0 30 0 40 0 10 7.5 30 7.5 20 10 ... % posiciones iniciales
 
 % ______________________________________________________________________________
 % inciso B
-% inciso_b
+inciso_b
 
 % ______________________________________________________________________________
 %animacion:
 % si la tercera condicion es true genera el gif
-animacion(t, posiciones, true);
+% animacion(t, posiciones, true);

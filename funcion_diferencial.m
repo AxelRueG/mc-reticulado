@@ -22,9 +22,9 @@ function diff = funcion_diferencial(t,X)
   P = [0 -1];                        % fuerza externa
 
   %% funcion senoidal ----------------------------------------------------------
-  % senoidal = @(A,fs) A*sin(2*pi*fs*t);
-  %% Fuerza P(t) con variacion senusoidal
-  % P = [0 -senoidal(1,0.1)];  % en y
+  senoidal = @(A,fs) A*sin(2*pi*fs*t);
+  % Fuerza P(t) con variacion senusoidal
+  P = [0 -senoidal(1,2)];  % en y
 
 % ______________________________________________________________________________
 %Definimos las fuerza que se ejercen entre las masas:  
